@@ -1,0 +1,23 @@
+/* src/components/SupportInfo.css */
+.support-info {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin: 20px 0;
+  }
+  
+  .support-item {
+    text-align: left;
+  }
+  
+  .support-item p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333; /* Adjust color to match the image */
+  }
+  
+  .support-item a {
+    color: #0071e3;
+    text-decoration: none;
+    font-size: 14px;
+  }
