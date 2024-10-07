@@ -17,8 +17,15 @@
 
 .mac-header {
   text-align: center;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  
+}
+.mac-header1 {
+  text-align: center;
   padding-top: 50px;
   margin-bottom: 20px;
+  
 }
 
 .mac-nav {
@@ -87,7 +94,7 @@
 }
 .mac-video-container {
   width: 100%;
-  max-height: 1000px;
+  max-height: 800px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -103,15 +110,41 @@
   outline: none;
   cursor: pointer;
   transition: transform 0.5s ease, border-radius 0.5s ease;
-  border-radius: 20px; /* Ensure border-radius is applied */
-  clip-path: inset(0% 0% 0% 0%);
+  border-radius: 0; /* Ensure border-radius is applied */
+ 
 }
 
 .mac-video-container.scrolled .mac-video {
-  clip-path: inset(10% 10% 10% 10%);
+  clip-path: inset(20% 20% 20% 20%);
 }
+
+
+.video-control-button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.315);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  z-index: 10;
+}
+
+.video-control-button:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+
 /*  */
 .mac-header {
+ 
+  margin-bottom: 20px;
+  padding-left: 20px;
+  
+}
+.mac-header1 {
  
   margin-bottom: 20px;
   padding-left: 20px;
@@ -124,6 +157,14 @@
   color: #1d1d1f;
   margin-left: 85px;
   text-align: left;
+}
+.mac-header1 h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1d1d1f;
+  margin-left: 85px;
+  text-align: left;
+  padding-top: 100px;
 }
 
 
@@ -309,6 +350,7 @@
   align-items: center;
   margin-bottom: 20px;
   padding-left: 85px;
+  padding-top: 100px;
 }
 
 .explore-lineup h1 {
@@ -611,6 +653,7 @@
 }
 
 .buy-mac-section {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -624,6 +667,7 @@
   color: #1d1d1f;
   margin: 0;
   padding-left: 85px;
+  padding-top: 100px;
 }
 
 .buy-mac-links {
@@ -794,7 +838,7 @@
   justify-content: space-between; /* Align items horizontally */
   width: 100%;
   align-items: center; /* Center vertically */
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   padding-left: 85px;
 }
 
@@ -869,4 +913,54 @@
   color: #0071e3;
   text-decoration: none;
   font-size: 16px;
+}
+
+
+.mac-links-section {
+  background-color: #f5f5f7;
+  padding: 40px 20px;
+  text-align: left;
+  
+}
+
+.mac-links-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-left: 85px;
+  padding-top: 60px;
+}
+
+.mac-links-column {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.mac-links-column h2 {
+  font-size: 12px;
+  color: #6e6e73;
+  margin-bottom: 10px;
+}
+
+.mac-links-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mac-links-column li {
+  font-size: 24px;
+  font-weight: normal;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-weight: nomal;
+  font-size: 16px;
+  
+}
+.highlight1 {
+  font-weight: bold;
+  
 }

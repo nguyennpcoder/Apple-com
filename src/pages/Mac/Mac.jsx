@@ -29,20 +29,23 @@ import Macessentials from './img/Macessentials.jpg';
 import Macessentials1 from './img/Macessentials1.jpg';
 
 const Mac = () => {
-  const videoRef = useRef(null);
+  
   const infoSectionRef = useRef(null);
   const cardSectionRef = useRef(null);
+  const videoContainerRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const handleVideoClick = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
+    const video = videoContainerRef.current.querySelector('video');
+    if (video) {
+      if (isPlaying) {
+        video.pause();
       } else {
-        videoRef.current.pause();
+        video.play();
       }
+      setIsPlaying(!isPlaying);
     }
   };
-
   const scrollLeft = () => {
     infoSectionRef.current.scrollBy({ left: -350, behavior: 'smooth' });
     cardSectionRef.current.scrollBy({ left: -350, behavior: 'smooth' });
@@ -76,35 +79,51 @@ const Mac = () => {
         return world_mac_iphone;
     }
   };
-
   useEffect(() => {
+    const video = videoContainerRef.current.querySelector('video');
+  
+    const handleVideoEnd = () => {
+      video.currentTime = 0;
+      video.play();
+    };
+  
     const handleScroll = () => {
-      const video = videoRef.current;
-      if (video) {
-        const videoTop = video.getBoundingClientRect().top;
+      const videoContainer = videoContainerRef.current;
+      if (videoContainer) {
+        const videoTop = videoContainer.getBoundingClientRect().top;
+        const videoBottom = videoContainer.getBoundingClientRect().bottom;
         const windowHeight = window.innerHeight;
         const scrollY = window.scrollY;
   
         if (videoTop < windowHeight) {
-          const scale = Math.max(0.8, 1 - scrollY / 4000);
-          const borderRadius = Math.min(50, scrollY / 20);
-          video.style.transform = `scale(${scale})`;
-          video.style.borderRadius = `${borderRadius}px`;
+          const scale = Math.max(0.88, 1 - scrollY / 3000);
+          const borderRadius = Math.min(80, scrollY / 10);
+          videoContainer.style.transform = `scale(${scale})`;
+          videoContainer.style.borderRadius = `${borderRadius}px`;
         }
       }
   
       const elements = document.querySelectorAll('.fade-in');
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 300) { // Trigger slightly earlier
+        if (rect.top < window.innerHeight - 300) {
           el.classList.add('visible');
         }
       });
-    
     };
   
+    if (video) {
+      video.addEventListener('ended', handleVideoEnd);
+    }
+  
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+  
+    return () => {
+      if (video) {
+        video.removeEventListener('ended', handleVideoEnd);
+      }
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
   
   
@@ -167,36 +186,37 @@ const Mac = () => {
         <p>If you can dream it,<br /> Mac can do it.</p>
       </main>
 
-      <div className="mac-video-container"  ref={videoRef}>
-        <video
-          className="mac-video"
-          ref={videoRef} // Ensure ref is only on the video element
-          autoPlay
-          muted
-          onClick={handleVideoClick}
-        >
+      <div
+        className="mac-video-container"
+        ref={videoContainerRef}
+        onClick={handleVideoClick}
+      >
+        <video className="mac-video" autoPlay muted>
           <source src={videoMac} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
-      <header className="mac-header fade-in">
+      <header className="mac-header1 fade-in">
         <h1>Get to know Mac.</h1>
       </header>
       <div className="mac-info-section fade-in" ref={infoSectionRef}>
-        <div className="mac-info-card">
-          <img src={mac1} alt="Getting Started" />
-          <div className="mac-info-text white-text">
-            <h2>Getting Started</h2>
-            <p>Easy to use. Easy to love.</p>
-          </div>
+      <div className="mac-info-card">
+        <img src={mac1} alt="Getting Started" />
+        <div className="mac-info-text white-text">
+          <h2>Getting Started</h2>
+          <p>Easy to use. Easy to love.</p>
         </div>
+        <PlusOutlined className="plus-icon" /> 
+      </div>
         <div className="mac-info-card">
           <img src={mac2} alt="Performance and Battery Life" />
           <div className="mac-info-text white-text">
             <h2>Performance and Battery Life</h2>
             <p>Go fast. Go far.</p>
+            
           </div>
+          <PlusOutlined className="plus-icon" />
         </div>
         <div className="mac-info-card">
           <img src={mac3} alt="Mac and iPhone" />
@@ -204,6 +224,7 @@ const Mac = () => {
             <h2>Mac and iPhone</h2>
             <p>Dream team.</p>
           </div>
+          <PlusOutlined className="plus-icon" />
         </div>
         <div className="mac-info-card">
           <img src={mac4} alt="Compatibility" />
@@ -211,6 +232,7 @@ const Mac = () => {
             <h2>Compatibility</h2>
             <p>Mac runs your favorite apps.</p>
           </div>
+          <PlusOutlined className="plus-icon" />
         </div>
         <div className="mac-info-card">
           <img src={mac5} alt="Privacy and Security" />
@@ -218,6 +240,7 @@ const Mac = () => {
             <h2>Privacy and Security</h2>
             <p>Your business, nobody else's.</p>
           </div>
+          <PlusOutlined className="plus-icon" />
         </div>
         <div className="mac-info-card">
           <img src={mac6} alt="Durability" />
@@ -225,6 +248,7 @@ const Mac = () => {
             <h2>Durability</h2>
             <p>Built to stand the test of time.</p>
           </div>
+          <PlusOutlined className="plus-icon" />
         </div>
         <div className="mac-info-card">
           <img src={mac7} alt="Apple Values" />
@@ -232,6 +256,7 @@ const Mac = () => {
             <h2>Apple Values</h2>
             <p>Our values drive everything we do.</p>
           </div>
+          <PlusOutlined className="plus-icon" />
         </div>
       </div>
       <div className="scroll-buttons ">
@@ -393,7 +418,7 @@ const Mac = () => {
       </div>
 
       <section className="integration-section">
-      <header className="mac-header">
+      <header className="mac-header1">
       <h1>Significant others.</h1>
       </header>
       <div className="integration-content">
@@ -448,6 +473,52 @@ const Mac = () => {
       <a href="#">Learn more &gt;</a>
       <img className="img1" src={Macessentials1} alt="Studio Display" />
      
+    </div>
+  </div>
+</section>
+
+<section className="mac-links-section">
+<header className="mac-header1">
+      <h1>Mac</h1>
+      </header>
+  <div className="mac-links-container">
+  <div className="mac-links-column">
+      <h2>Explore Mac</h2>
+      <ul>
+        <li><span className="highlight1">Explore All Mac</span></li>
+        <li><span className="highlight1">MacBook Air</span></li>
+        <li><span className="highlight1">MacBook Pro</span></li>
+        <li><span className="highlight1">iMac</span></li>
+        <li><span className="highlight1">Mac mini</span></li>
+        <li><span className="highlight1">Mac Studio</span></li>
+        <li><span className="highlight1">Mac Pro</span></li>
+        <li><span className="highlight1">Displays</span></li>
+        <li><span className="highlight">Compare Mac</span></li>
+        <li><span className="highlight">Mac Does That</span></li>
+      </ul>
+    </div>
+    <div className="mac-links-column">
+      <h2>Shop Mac</h2>
+      <ul>
+        <li><span className="highlight">Shop Mac</span></li>
+        <li><span className="highlight">Mac Accessories</span></li>
+        <li><span className="highlight">Apple Trade In</span></li>
+        <li><span className="highlight">Financing</span></li>
+      </ul>
+    </div>
+    <div className="mac-links-column">
+      <h2>More from Mac</h2>
+      <ul>
+        <li><span className="highlight">Mac Support</span></li>
+        <li><span className="highlight">AppleCare+ for Mac</span></li>
+        <li><span className="highlight">macOS Sequoia</span></li>
+        <li><span className="highlight">Apple Intelligence</span></li>
+        <li><span className="highlight">Apps by Apple</span></li>
+        <li><span className="highlight">Continuity</span></li>
+        <li><span className="highlight">iCloud+</span></li>
+        <li><span className="highlight">Mac for Business</span></li>
+        <li><span className="highlight">Education</span></li>
+      </ul>
     </div>
   </div>
 </section>
