@@ -1,0 +1,28 @@
+/* src/components/Home.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden; /* xem bằng điện thoại không bị xấu  */
+  }
+  
+  .home-header h1 {
+    font-size: 48px; /* Điều chỉnh kích thước chữ */
+    font-weight: bold;
+    display: inline;
+  }
+  
+  .home-header p {
+    font-size: 36px; /* Điều chỉnh kích thước chữ */
+    color: #6e6e73; /* Màu sắc giống với ảnh */
+    display: inline;
+    margin-left: 10px;
+  }
+  /* thoát ẩn thoát hiện  */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Adjusted transition duration */
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
