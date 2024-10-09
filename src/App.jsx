@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Product from './components/Product';
 import Mac from './pages/Mac/Mac';
+import Iphone from './pages/Iphone/Iphone';
 
 const App = () => {
   
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mac" element={<Mac />} /> 
+        <Route path="/iphone" element={<Iphone />} /> 
         <Route path="/:product" element={<Product />} />
       </Routes>
       <Footer />

@@ -1,0 +1,445 @@
+/* thoát ẩn thoát hiện  */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Adjusted transition duration */
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
+.iphone-page {
+    background-color: #f5f5f7;
+    overflow-x: hidden; /* xem bằng điện thoại không bị xấu */
+  }
+  
+  .icon-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+   
+  }
+  
+  .icon-item {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    width: 80px;
+  }
+  
+  .icon-item img {
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  
+  .new {
+    color: #ac441e;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .iphone-header {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  .iphone-header {
+ 
+    margin-bottom: 20px;
+    padding-left: 20px;
+    
+  }
+  
+  .iphone-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1d1d1f;
+    margin-left: 85px;
+    text-align: left;
+  }
+  
+  .iphone-header1 {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+  }
+  .iphone-header1 {
+ 
+    margin-bottom: 20px;
+    padding-left: 20px;
+    
+  }
+ 
+  
+  .iphone-header1 h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1d1d1f;
+    margin-left: 85px;
+    text-align: left;
+    padding-top: 100px;
+  }
+  .iphone-header p {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .ip-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    
+    padding: 30px;
+  }
+  
+  .ip-content h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: #1d1d1f;
+    padding-left: 60px;
+  }
+  
+  .ip-content p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    padding-right: 60px;
+  }
+  .iphone-video-container {
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iphone-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s ease, border-radius 0.5s ease;
+    border-radius: 0; /* Ensure border-radius is applied */
+   
+  }
+  
+  .iphone-video-container.scrolled .iphone-video {
+    clip-path: inset(20% 20% 20% 20%);
+  }
+  .ip-education {
+    font-size: 14px;
+    color: #333;
+ 
+  }
+  
+  .ip-education a {
+    color: #0071e3;
+    text-decoration: none;
+  }
+  
+
+.ip-info-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding: 20px;
+    padding-left: 110px; /* Align cards with header */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .ip-info-section::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .ip-info-card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    margin-right: 20px; 
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .ip-info-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .ip-info-text {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+.white-text {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .black-text {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .ip-info-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .ip-info-card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .ip-info-card p {
+    font-size: 26px;
+  }
+  
+  .scroll-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 1350px;
+  }
+  
+  .scroll-buttons button {
+    background-color: #d6d6d6;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+   
+  }
+  
+  .scroll-buttons button:hover {
+    background-color: #ffffff;
+  }
+
+  .explore-lineup {
+    background-color: #f5f5f7;
+    padding: 40px 20px;
+  }
+  
+  .explore-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 85px;
+    padding-top: 100px;
+  }
+  
+  .explore-lineup h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1d1d1f;
+    margin: 0;
+  }
+  
+  .explore-links {
+    display: flex;
+    gap: 20px;
+    padding-right: 85px;  
+  }
+  
+  .explore-links a {
+    color: #0071e3;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* product */
+  .product2-spec-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    padding: 0;
+    padding-left: 100px;
+    
+}
+
+.product2-lineup {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    width: 100%;
+   
+    padding: 50px 0;
+    padding-bottom: 1000px;
+    gap: 40px;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.product2 {
+  text-align: center;
+    flex: 0 0 220px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 550px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.product2 img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.product2 img:hover {
+    transform: scale(1.05);
+}
+.product2 .img1 {
+  width: 92%;
+  height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.5s;
+}
+
+.product2 .img1:hover {
+  transform: scale(1.05);
+}
+.product2 .img2 {
+  width: 77%;
+  height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.5s;
+}
+
+.product2 .img2:hover {
+  transform: scale(1.05);
+}
+
+.new-models2 {
+  color: #d35400;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  min-height: 20px;
+}
+
+.product2 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product2 p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+  margin: 10px 0;
+}
+.product2 button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px 0;
+}
+
+.product2 button:hover {
+  background-color: #005bb5;
+}
+
+.product2 a {
+  color: #0071e3;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.color-options2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.color-circle2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+}
+.price{
+  font-size: 16px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+.components {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center components horizontally */
+ 
+  text-align: center;
+
+}
+
+.component {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  
+  align-items: center; /* Center content horizontally */
+}
+
+.component img {
+  width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.component p {
+  font-size: 12px;
+  margin: 5px 0;
+ 
+}
+.p_component {
+ 
+  margin: 5px 0;
+  line-height: 1.5; /* Adjust the line height as needed */
+}
+.dash {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+}

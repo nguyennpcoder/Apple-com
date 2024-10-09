@@ -96,7 +96,7 @@ const Mac = () => {
         const scrollY = window.scrollY;
   
         if (videoTop < windowHeight) {
-          const scale = Math.max(0.88, 1 - scrollY / 3000);
+          const scale = Math.max(0.88, 1 - scrollY / 6000);
           const borderRadius = Math.min(80, scrollY / 10);
           videoContainer.style.transform = `scale(${scale})`;
           videoContainer.style.borderRadius = `${borderRadius}px`;
@@ -267,7 +267,7 @@ const Mac = () => {
         <h1>Help me choose.</h1>
         <div className="choose-content">
           <div className="choose-text">
-            <p>Answer a few questions to find the best Mac for you.</p>
+            <p>Answer a few questions to find <br/> <span>the best Mac for you.</span></p>
             <button className="get-started-button">Get started</button>
           </div>
           <div className="choose-image">
@@ -358,6 +358,7 @@ const Mac = () => {
   </div>
 </section>
 </div>
+
 <header className="mac-header">
 <div className="buy-mac-section">
   <h1>Why Apple is the best <br/> place to buy Mac.</h1>
