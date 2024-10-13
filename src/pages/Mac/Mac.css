@@ -925,7 +925,7 @@
 .mac-links-container {
   display: flex;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   margin-left: 85px;
   padding-top: 60px;
@@ -934,10 +934,12 @@
 .mac-links-column {
   flex: 1;
   margin: 0 20px;
+  
+ 
 }
 
 .mac-links-column h2 {
-  font-size: 12px;
+  font-size: 16px;
   color: #6e6e73;
   margin-bottom: 10px;
 }
@@ -948,14 +950,15 @@
 }
 
 .mac-links-column li {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: normal;
   color: #1d1d1f;
   margin-bottom: 10px;
+
 }
 
 .highlight {
-  font-weight: nomal;
+  font-weight: bold;
   font-size: 16px;
   
 }

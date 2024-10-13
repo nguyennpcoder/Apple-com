@@ -33,9 +33,23 @@ import component4_2 from "./img/product_tile_icon_iphone_16_camera.png";
 import component4_3 from "./img/product_tile_icon_iphone_15_camera.png";
 import component4_4 from "./img/product_tile_icon_iphone_14_camera.png";
 import component4_5 from "./img/product_tile_icon_iphone_se_camera.png";
+import guided_tour from "./img/guided_tour.jpg";
+import icon_trade_in from "./img/icon_trade_in.png";
+import icon_apple_card from "./img/icon_apple_card.png";
+import icon_carrier from "./img/icon_carrier.png";
+import icon_delivery from "./img/icon_delivery.png";
+import icon_specialist from "./img/icon_specialist.png";
+import icon_person from "./img/icon_person.png";
+import icon_asa from "./img/icon_asa.png";
+import magsafe__dac2joy from "./img/magsafe__dac2joy.jpg";
+import airtag__fur from "./img/airtag__fur.jpg";
+import Significant1 from "./img/Significant1.jpg";
+import Significant2 from "./img/Significant2.jpg";
+import Significant3 from "./img/Significant3.jpg";
+
 const Iphone = () => {
   const infoSectionRef = useRef(null);
-  // const cardSectionRef = useRef(null);
+  const cardSectionRef = useRef(null);
   const videoContainerRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -106,6 +120,29 @@ const Iphone = () => {
     };
   }, []);
 
+  
+  const [activeIndex, setActiveIndex] = useState(0); // Default to the first section
+
+  // const toggleSection = (index) => {
+  //   setActiveIndex(activeIndex === index ? null : index); //click đóng tabs được 
+  // };
+  const toggleSection = (index) => {
+    setActiveIndex(index); // ko đóng tab được 
+  };
+
+
+  const getImage = () => {
+    switch (activeIndex) {
+      case 0:
+        return <img src={Significant1} alt="Significant " className="active" />;
+      case 1:
+        return <img src={Significant2} alt="Significant " />;
+      case 2:
+        return <img src={Significant3} alt="Significant " />;
+      default:
+        return <img src={Significant1} alt="Significant " />;
+    }
+  };
   const items = [
     {
       name: "iPhone 16 Pro",
@@ -312,7 +349,7 @@ const Iphone = () => {
               <button>Learn more</button>
               <a href="#">Buy &gt;</a>
             </div>
-            
+
             <div className="components">
               <div className="component">
                 <img src={component1} alt="Component 1" />
@@ -331,8 +368,9 @@ const Iphone = () => {
               <div className="component">
                 <img src={component4} alt="Component 4" />
                 <p className="p_component">
-                  Pro camera system <br></br>Our most advanced 48MP Fusion camera <br></br>5x
-                  Telephoto camera<br></br> 48MP Ultra Wide camera
+                  Pro camera system <br></br>Our most advanced 48MP Fusion
+                  camera <br></br>5x Telephoto camera<br></br> 48MP Ultra Wide
+                  camera
                 </p>
               </div>
               <div className="component">
@@ -393,14 +431,15 @@ const Iphone = () => {
               <div className="component">
                 <img src={component4_2} alt="Component 4" />
                 <p className="p_component">
-                  Advanced dual-camera system <br></br>48MP Fusion camera<br></br> 2x Telephoto
+                  Advanced dual-camera system <br></br>48MP Fusion camera
+                  <br></br> 2x Telephoto
                   <br></br>12MP Ultra Wide camera
                 </p>
               </div>
               <div className="component">
                 <img src={component5} alt="Component 5" />
                 <p>
-                Up to 27 hours video playback<sup>2</sup>
+                  Up to 27 hours video playback<sup>2</sup>
                 </p>
               </div>
             </div>
@@ -451,14 +490,14 @@ const Iphone = () => {
               <div className="component">
                 <img src={component4_3} alt="Component 4" />
                 <p className="p_component">
-                  Dual-camera system <br></br>48MP Main camera<br></br> 2x Telephoto<br></br> 12MP Ultra
-                  Wide camera
+                  Dual-camera system <br></br>48MP Main camera<br></br> 2x
+                  Telephoto<br></br> 12MP Ultra Wide camera
                 </p>
               </div>
               <div className="component">
                 <img src={component5} alt="Component 5" />
                 <p>
-                Up to 26 hours video playback<sup>2</sup>
+                  Up to 26 hours video playback<sup>2</sup>
                 </p>
               </div>
             </div>
@@ -513,14 +552,15 @@ const Iphone = () => {
               <div className="component">
                 <img src={component4_4} alt="Component 4" />
                 <p className="p_component">
-                  Dual-camera system <br></br>12MP Main camera<br></br>—<br></br>
+                  Dual-camera system <br></br>12MP Main camera<br></br>—
+                  <br></br>
                   12MP Ultra Wide camera
                 </p>
               </div>
               <div className="component">
                 <img src={component5} alt="Component 5" />
                 <p>
-                Up to 26 hours video playback<sup>2</sup>
+                  Up to 26 hours video playback<sup>2</sup>
                 </p>
               </div>
             </div>
@@ -563,19 +603,244 @@ const Iphone = () => {
               <div className="component">
                 <img src={component4_5} alt="Component 4" />
                 <p className="p_component">
-                  Single-camera system <br></br>12MP Main camera<br></br> —<br></br>—
+                  Single-camera system <br></br>12MP Main camera<br></br> —
+                  <br></br>—
                 </p>
               </div>
               <div className="component">
                 <img src={component5} alt="Component 5" />
                 <p>
-                Up to 15 hours video playback<sup>2</sup>
+                  Up to 15 hours video playback<sup>2</sup>
                 </p>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <section className="guided-tour-section fade-in">
+        <h1>
+          Take a closer look at <br></br> our latest models.
+        </h1>
+        <div className="tour-content">
+          <div className="tour-image-container">
+            <img src={guided_tour} alt="Guided Tour" className="tour-image" />
+            <div className="tour-text-overlay">
+              <h2>A Guided Tour of </h2> <h3>iPhone 16 & iPhone 16 Pro</h3>
+              <button className="tour-button">Watch the film</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <header className="iphone-header">
+        <div className="buy-ip-section">
+          <h1>
+            Why Apple is the best <br /> place to buy iPhone.
+          </h1>
+          <div className="buy-ip-links">
+            <a href="#">Shop iPhone &gt;</a>
+          </div>
+        </div>
+      </header>
+
+      <div className="card-section fade-in" ref={cardSectionRef}>
+        <div className="card-item">
+          <img src={icon_trade_in} alt="Icon 1" />
+          <h2>
+            Save with Apple
+            <br /> Trade In.
+          </h2>
+          <p>
+            Get $180–$650 in credit toward <br></br> iPhone 16 or iPhone 16 Pro
+            when you <br></br>trade in iPhone 12 or higher.*
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+        <div className="card-item">
+          <img src={icon_apple_card} alt="Icon 2" />
+          <h2>
+            Pay over time, <br></br>interest-free.
+          </h2>
+          <p>
+            When you choose to check out with <br></br>Apple Card Monthly
+            Installments.12
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+        <div className="card-item">
+          <img src={icon_carrier} alt="Icon 3" />
+          <h2>
+            Apple. Your one-stop <br></br>shop for incredible<br></br> carrier
+            deals.
+          </h2>
+          <p>
+            Get up to $1000 in credit on a new <br></br>iPhone with AT&T, Boost
+            Mobile, <br></br>T‑Mobile, or Verizon. Trade‑in may be<br></br>{" "}
+            required.13
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+        <div className="card-item">
+          <img src={icon_delivery} alt="Icon 4" />
+          <h2>
+            Get flexible delivery<br></br> and easy pickup.
+          </h2>
+          <p>
+            Choose two‑hour delivery from an <br></br>Apple Store, free delivery
+            or easy <br></br>pickup options.
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+        <div className="card-item">
+          <img src={icon_specialist} alt="Icon 5" />
+          <h2>
+            Shop live with <br></br>a Specialist.
+          </h2>
+          <p>
+            Let us guide you live over video and <br></br> answer all of your
+            questions.
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+        <div className="card-item">
+          <img src={icon_person} alt="Icon 6" />
+          <h2>
+            Meet your new iPhone <br></br>with Personal Setup.
+          </h2>
+          <p>
+            Jump into online sessions with a <br></br>Specialist to set up your
+            iPhone and <br></br>discover new features.
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+        <div className="card-item">
+          <img src={icon_asa} alt="Icon 7" />
+          <h2>
+            Explore a shopping <br></br>experience designed <br></br>around you.
+          </h2>
+          <p>
+            Use the Apple Store app to get a more <br></br>personal way to shop.
+          </p>
+          <PlusOutlined className="plus-icon" />
+        </div>
+      </div>
+
+      <div className="nav-buttons">
+        <button onClick={scrollLeft}>
+          <LeftOutlined />
+        </button>
+        <button onClick={scrollRight}>
+          <RightOutlined />
+        </button>
+      </div>
+
+      <section className="ip-essentials fade-in">
+        <div className="ip-essentials-header">
+          <h1>iPhone essentials.</h1>
+          <a href="#" className="all-accessories-link">
+            All iPhone accessories &gt;
+          </a>
+        </div>
+
+        <div className="essentials-content">
+          <div className="essential-item">
+            <h2>MagSafe</h2>
+            <p>Snap on a magnetic case, wallet, or both. <br></br>
+            And get faster, more efficient wireless charging.</p>
+            <a href="#">Shop MagSafe accessories &gt;</a>
+            <img src={magsafe__dac2joy} alt="Mac accessories" />
+          </div>
+          <div className="essential-item">
+            <h2>AirTag</h2>
+            <p>Attach one to your keys. Put another in your backpack. <br></br>
+            If they’re misplaced, just use the Find My app.</p>
+            <a href="#">Buy &gt;</a>
+            <img src={airtag__fur} alt="Studio Display" />
+          </div>
+        </div>
+      </section>
+
+      <section className="Significant-section fade-in">
+      <header className="ip-header1">
+      <h1>Significant others.</h1>
+      </header>
+      <div className="Significant-content">
+        <div className="Significant-text">
+          <div className="Significant-item">
+            <h2 onClick={() => toggleSection(0)}>
+            iPhone and Mac {activeIndex === 0 ? <UpOutlined /> : <DownOutlined />}
+            </h2>
+            <p className={activeIndex === 0 ? 'visible' : ''}>
+            With iPhone Mirroring, you can view your iPhone screen on your Mac and control it without picking up your phone. Continuity features also let you answer calls or messages right from your Mac. You can even copy images, video, or text from your iPhone and paste it all into a different app on your Mac. And with iCloud, you can access your files from either device.
+            </p>
+          </div>
+          <div className="Significant-item">
+            <h2 onClick={() => toggleSection(1)}>
+            iPhone and <br></br>Apple Watch{activeIndex === 1 ? <UpOutlined /> : <DownOutlined />}
+            </h2>
+            <p className={activeIndex === 1 ? 'visible' : ''}>
+            Misplaced your iPhone? The latest Apple Watch models can show you its approximate distance and direction.14 To set up a group photo on your iPhone, join the group and use Apple Watch as a viewfinder to snap the shot. And when you take a call on your Apple Watch, just tap your iPhone to continue the conversation there.
+            </p>
+          </div>
+          <div className="Significant-item">
+            <h2 onClick={() => toggleSection(2)}>
+            iPhone and AirPods {activeIndex === 2 ? <UpOutlined /> : <DownOutlined />}
+            </h2>
+            <p className={activeIndex === 2 ? 'visible' : ''}>
+            Set up AirPods on iPhone with just a tap. You’ll love Adaptive Audio, which automatically tailors the noise control for you to provide the best listening experience across different environments and interactions throughout the day.
+            </p>
+          </div>
+        </div>
+        <div className="Significant-image">
+        {getImage()}
+        </div>
+      </div>
+    </section>
+
+    <section className="ip-links-section">
+<header className="ip-header1">
+      <h1>iPhone</h1>
+      </header>
+  <div className="ip-links-container">
+  <div className="ip-links-column">
+      <h2>Explore iPhone</h2>
+      <ul>
+        <li><span className="highlight3">Explore All iPhone</span></li>
+        <li><span className="highlight3">iPhone 16 Pro</span></li>
+        <li><span className="highlight3">iPhone 16</span></li>
+        <li><span className="highlight3">iPhone 15</span></li>
+        <li><span className="highlight3">iPhone 14</span></li>
+        <li><span className="highlight3">iPhone SE</span></li>
+      
+        <li><span className="highlight2">Compare iPhone</span></li>
+        <li><span className="highlight2">Switch from Android</span></li>
+      </ul>
+    </div>
+    <div className="ip-links-column">
+      <h2>Shop iPhone</h2>
+      <ul>
+        <li><span className="highlight2">Shop iPhone</span></li>
+        <li><span className="highlight2">iPhone Accessories</span></li>
+        <li><span className="highlight2">Apple Trade In</span></li>
+        <li><span className="highlight2">Financing</span></li>
+      </ul>
+    </div>
+    <div className="ip-links-column">
+      <h2>More from iPhone</h2>
+      <ul>
+        <li><span className="highlight2">iPhone Support</span></li>
+        <li><span className="highlight2">AppleCare+ for iPhone</span></li>
+        <li><span className="highlight2">iOS 18</span></li>
+        <li><span className="highlight2">Apple Intelligence</span></li>
+        <li><span className="highlight2">Apps by Apple</span></li>
+        <li><span className="highlight2">iPhone Privacy</span></li>
+        <li><span className="highlight2">iCloud+</span></li>
+        <li><span className="highlight2">Wallet, Pay, Card</span></li>
+        <li><span className="highlight2">Siri</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
