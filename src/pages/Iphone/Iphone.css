@@ -339,11 +339,13 @@
     font-size: 24px;
     font-weight: bold;
     margin: 10px 0;
+    text-align: center;
 }
 
 .product2 p {
     font-size: 16px;
     margin: 5px 0;
+    text-align: center;
 }
 .button-container {
   display: flex;
@@ -424,6 +426,7 @@
 .component p {
   font-size: 12px;
   margin: 5px 0;
+  
  
 }
 .p_component {
@@ -552,6 +555,7 @@
 
 .buy-ip-links {
   padding-right: 85px;
+  margin-top:150px;
 }
 
 .buy-ip-links a {

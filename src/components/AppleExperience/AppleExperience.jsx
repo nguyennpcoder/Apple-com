@@ -4,9 +4,9 @@ import './AppleExperience.css';
 const AppleExperience = () => {
   const experiences = [
     {
-      title: "MLS Season Pass",
-      description: "Sign up for MLS Season Pass on Apple TV.",
-      image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-mlsleagues-202407?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1718926369972",
+      title: "Watch new Apple Originals every month.**",
+      description: "",
+      image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-tv-services-202409?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1727220094622",
     },
     {
       title: "Six Apple services. One easy subscription.",

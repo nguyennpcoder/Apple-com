@@ -12,12 +12,21 @@ const products = [
     image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-iphone-16-pro-202409_GEO_US?wid=800&hei=1000&fmt=jpeg&qlt=95&.v=1726165763260',
   },
   {
+    name: 'iPad mini',
+    description: 'Apple Intelligence Footnote ±',
+    price: 'From $499 or $41.58/mo.per month for 12 mo.monthsFootnote†',
+    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-ipad-mini-202410?wid=800&hei=1000&fmt=jpeg&qlt=95&.v=1727814498187',
+    isBlackText: true,
+  },
+  {
     name: 'Apple Watch Series 10',
     description: 'Thinstant classic.',
     price: 'From $399 or $33.25/mo. for 12 mo.*',
     image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-watch-s10-202409?wid=800&hei=1000&fmt=jpeg&qlt=95&.v=1724095131742',
     isBlackText: true,
   },
+
+
   {
     name: 'iPhone 16',
     description: 'Hello, Apple Intelligence.',

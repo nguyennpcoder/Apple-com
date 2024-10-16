@@ -1,0 +1,35 @@
+
+
+
+
+
+.watch-page {
+    background-color: #f5f5f7;
+    overflow-x: hidden; /* xem bằng điện thoại không bị xấu */
+  }
+  
+  .icon-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+   
+  }
+  
+  .icon-item {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    width: 80px;
+  }
+  
+  .icon-item img {
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  
+  .new {
+    color: #ac441e;
+    font-size: 12px;
+    font-weight: bold;
+  }

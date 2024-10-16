@@ -7,7 +7,8 @@ import Home from './pages/Home/Home';
 import Product from './components/Product';
 import Mac from './pages/Mac/Mac';
 import Iphone from './pages/Iphone/Iphone';
-
+import Ipad from './pages/Ipad/Ipad';
+import Watch from './pages/Watch/Watch';
 const App = () => {
   
   return (
@@ -17,6 +18,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/mac" element={<Mac />} /> 
         <Route path="/iphone" element={<Iphone />} /> 
+        <Route path="/ipad" element={<Ipad />} /> 
+        <Route path="/watch" element={<Watch />} />
         <Route path="/:product" element={<Product />} />
       </Routes>
       <Footer />
