@@ -194,7 +194,7 @@
   }
   
   .ip-info-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
   
   .ip-info-card h2 {
@@ -304,7 +304,7 @@
 }
 
 .product2 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 .product2 .img1 {
   width: 92%;
@@ -314,7 +314,7 @@
 }
 
 .product2 .img1:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .product2 .img2 {
   width: 77%;
@@ -324,7 +324,7 @@
 }
 
 .product2 .img2:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .new-models2 {
@@ -595,7 +595,7 @@
 }
 
 .card-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .nav-buttons {

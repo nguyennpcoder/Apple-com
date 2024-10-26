@@ -9,6 +9,7 @@ import Mac from './pages/Mac/Mac';
 import Iphone from './pages/Iphone/Iphone';
 import Ipad from './pages/Ipad/Ipad';
 import Watch from './pages/Watch/Watch';
+import ShopBuyMac from './pages/Shop_Buy_Mac/ShopBuyMac';
 const App = () => {
   
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/iphone" element={<Iphone />} /> 
         <Route path="/ipad" element={<Ipad />} /> 
         <Route path="/watch" element={<Watch />} />
+        <Route path="/shop-buy-mac" element={<ShopBuyMac />} />
         <Route path="/:product" element={<Product />} />
       </Routes>
       <Footer />

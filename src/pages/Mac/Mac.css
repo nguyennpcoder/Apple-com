@@ -201,7 +201,7 @@
 }
 
 .mac-info-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .mac-info-card h2 {
@@ -460,7 +460,7 @@
   transition: transform 0.5s;
 }
 .product img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .product h2 {
   font-size: 24px;
@@ -512,7 +512,7 @@
 }
 
 .product1 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .product1 h2 {
@@ -721,7 +721,7 @@
 }
 
 .card-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .nav-buttons {

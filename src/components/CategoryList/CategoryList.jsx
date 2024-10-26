@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './CategoryList.css'; // Assuming you have a CSS file for custom styles
 
 const categories = [
-  { name: 'Mac', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-mac-nav-202310?wid=400&hei=260&fmt=png-alpha&.v=1696964122666', link: '/mac' },
+  { name: 'Mac', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-mac-nav-202310?wid=400&hei=260&fmt=png-alpha&.v=1696964122666', link: '/shop-buy-mac' },
   { name: 'iPhone', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202409_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1723857157128', link: '/iphone' },
   { name: 'iPad', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202405?wid=400&hei=260&fmt=png-alpha&.v=1714168620875', link: '/ipad' },
   { name: 'Apple Watch', image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202409?wid=400&hei=260&fmt=png-alpha&.v=1724165625838', link: '/watch' },

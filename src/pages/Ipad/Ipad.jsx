@@ -188,14 +188,14 @@ const Ipad = () => {
 
   return (
     <div className="ipad-page">
-      <div className="icon-menu">
+      <div className="icon-menu1">
         {items.map((item, index) => (
-          <div className="icon-item" key={index}>
+          <div className="icon-item1" key={index}>
             <img src={item.img} alt={item.name} />
             <p>
               {item.name}
               {item.new && <br />}
-              {item.new && <span className="new">New</span>}
+              {item.new && <span className="new1">New</span>}
             </p>
           </div>
         ))}
