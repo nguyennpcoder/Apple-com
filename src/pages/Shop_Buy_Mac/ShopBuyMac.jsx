@@ -25,18 +25,18 @@ function ShopBuyMac() {
     };
 
   return (
-    <div className="shop-buy-mac">
-      <header className="header">
+    <div className="shop-buy-macShopMac">
+      <header className="headerShopMac">
         <h1>Shop Mac</h1>
-        <div className="support">
-          <div className="support-item">
+        <div className="supportShopMac">
+          <div className="support-itemShopMac">
             <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-chat-specialist-icon-202309_AV2?wid=35&hei=35&fmt=jpeg&qlt=95&.v=1701194050335" alt="Support" />
             <div>
               <p>Need shopping help?</p>
               <a href="#ask-specialist">Ask a Mac Specialist</a>
             </div>
           </div>
-          <div className="support-item">
+          <div className="support-itemShopMac">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6327b76828e161465927013929f5a7b2a23403ed796b48dd3cc53338ffb8a57c?placeholderIfAbsent=true&apiKey=c03e8cb03df640c0b4254bffa3dca2bb" alt="Apple Store" />
             <div>
               <p>Visit an Apple Store</p>
@@ -45,7 +45,7 @@ function ShopBuyMac() {
           </div>
         </div>
       </header>
-      <nav className="navbar">
+      <nav className="navbarShopMac">
         <a href="#all-models">All Models</a>
         <a href="#guides">Shopping guides</a>
         <a href="#savings">Ways to Save</a>
@@ -54,80 +54,80 @@ function ShopBuyMac() {
         <a href="#experience">The Mac Experience</a>
         <a href="#stores">Special Stores</a>
       </nav>
-      <section className="product-section">
-        <h2 className="product-title">All models. <span>Take your pick.</span></h2>
-        <div className="product-carousel" onMouseEnter={() => setShowButtons(true)} onMouseLeave={() => setShowButtons(false)}>
+      <section className="product-sectionShopMac">
+        <h2 className="product-titleShopMac">All models. <span>Take your pick.</span></h2>
+        <div className="product-carouselShopMac" onMouseEnter={() => setShowButtons(true)} onMouseLeave={() => setShowButtons(false)}>
             {showButtons && (
-                <Button className="scroll-button" icon={<LeftOutlined />} onClick={scrollLeft} />
+                <Button className="scroll-buttonShopMac" icon={<LeftOutlined />} onClick={scrollLeft} />
             )}
-          <div className="product-cards" ref={scrollRef}>
-            <div className="product-card">
+          <div className="product-cardsShopMac" ref={scrollRef}>
+            <div className="product-cardShopMac">
               <h3>MacBook Air with M2 or M3 chip</h3>
               <img src={macbookAir} alt="MacBook Air" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $999 or $83.25/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
               <h3>MacBook Pro</h3>
               <img src={macbookPro} alt="MacBook Pro" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $1599 or $133.25/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
               <h3>iMac</h3>
               <img src={iMac} alt="iMac" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $1299 or $108.25/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
                 <h3>Mac mini</h3>
                 <img src={macMini} alt="Mac mini" />
-                <div className="description">
+                <div className="descriptionShopMac">
                     <p>From $599 or $49.91/mo. for 12 mo.*</p>
                     <button>Buy</button>
                 </div>
                 </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
               <h3>Mac Studio</h3>
               <img src={macStudio} alt="Mac Studio" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $1999 or $166.58/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
               <h3>Studio Display</h3>
               <img src={studioDisplay} alt="Studio Display" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $1599 or $133.25/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
               <h3>Mac Pro</h3>
               <img src={macPro} alt="Mac Pro" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $6999 or $583.25/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
-            <div className="product-card">
+            <div className="product-cardShopMac">
               <h3>Pro Display XDR</h3>
               <img src={proDisplayXDR} alt="Pro Display XDR" />
-              <div className="description">
+              <div className="descriptionShopMac">
               <p>From $4999 or $416.58/mo. for 12 mo.*</p>
               <button>Buy</button>
               </div>
             </div>
           </div>
           {showButtons && (
-            <Button className="scroll-button" icon={<RightOutlined />} onClick={scrollRight} />
+            <Button className="scroll-buttonShopMac" icon={<RightOutlined />} onClick={scrollRight} />
         )}
         </div>
       </section>
